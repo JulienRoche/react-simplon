@@ -1,11 +1,19 @@
+import { Car } from '../../models/Car';
 import './Product.scss';
 
-const Product = () => {
+type ProductProps = {
+  product: Car;
+}
+
+const Product = (props: ProductProps) => {
+  const formatPrice = (): string =>
+    props.product.price.toLocaleString() + " €";
+
   return (
     <div className="product card">
-      <img src="/products/audi-e-tron.jpeg" />
-      <p className="label">Audi RS e-tron GT 598ch</p>
-      <div className="price">156900 €</div>
+      <img src={props.product.imageUrl} alt={props.product.label} />
+      <p className="label">{props.product.label}</p>
+      <div className="price">{formatPrice()}</div>
       <button className="button">Ajouter au panier</button>
     </div>
   )
