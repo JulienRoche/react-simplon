@@ -1,11 +1,12 @@
 import 'bulma/css/bulma.min.css';
 import './App.scss';
 
+import Product from './components/product/Product';
+
 function App() {
   return (
     <div className="App">
-      <h1 className="is-size-1">Bonjour Simplon !</h1>
-      <p>Prêt pour React ?</p>
+      <Product />
     </div>
   );
 }
