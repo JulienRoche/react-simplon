@@ -1,0 +1,45 @@
+.basket {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: aliceblue;
+  padding: 10px;
+
+  .row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .image {
+      width: 100px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .full {
+      flex: 1;
+    }
+
+    .quantity {
+      font-size: 20px;
+      width: 60px;
+      text-align: right;
+    }
+
+    .finalPrice {
+      font-size: 24px;
+      font-weight: bold;
+      width: 150px;
+      text-align: right;
+    }
+  }
+
+  .total {
+    text-align: right;
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
